@@ -1,0 +1,14 @@
+{
+  "@@locale": "vi",
+  "appName": "Quản lý nhập kho",
+  "hello": "Xin chào",
+  "save": "Lưu",
+  "cancel": "Huỷ",
+
+  "welcomeBack": "Chào mừng",
+  "loginDescription": "Tiếp tục với Google để truy cập hệ thống quản lý kho.",
+  "continueWithGoogle": "Tiếp tục với Google",
+  "loginSuccess": "Đăng nhập thành công",
+  "loginFailed": "Đăng nhập thất bại",
+  "inventoryDescription": "Hệ thống quản lý kho hiện đại sử dụng Firebase"
+}

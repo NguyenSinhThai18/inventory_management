@@ -1,0 +1,14 @@
+{
+  "@@locale": "en",
+  "appName": "Inventory Management",
+  "hello": "Hello",
+  "save": "Save",
+  "cancel": "Cancel",
+
+  "welcomeBack": "Welcome Back",
+  "loginDescription": "Continue with Google to access inventory system.",
+  "continueWithGoogle": "Continue with Google",
+  "loginSuccess": "Login success",
+  "loginFailed": "Login failed",
+  "inventoryDescription": "Modern warehouse inventory management powered by Firebase"
+}
