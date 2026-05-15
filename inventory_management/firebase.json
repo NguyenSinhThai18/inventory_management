@@ -1,1 +1,36 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"inventory-management-3abc2","appId":"1:900145709317:android:b18288b92682083176376c","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"inventory-management-3abc2","configurations":{"android":"1:900145709317:android:b18288b92682083176376c","web":"1:900145709317:web:84a26688aa99156076376c"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "inventory-management-3abc2",
+          "appId": "1:900145709317:android:b18288b92682083176376c",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "inventory-management-3abc2",
+          "configurations": {
+            "android": "1:900145709317:android:b18288b92682083176376c",
+            "web": "1:900145709317:web:84a26688aa99156076376c"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
