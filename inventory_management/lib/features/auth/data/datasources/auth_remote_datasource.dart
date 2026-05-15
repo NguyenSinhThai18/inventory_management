@@ -4,13 +4,17 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthRemoteDatasource {
   Future<User?> signInWithGoogle() async {
-    UserCredential userCredential;
+    try {
+      if (kIsWeb) {
+        final provider = GoogleAuthProvider();
 
-    if (kIsWeb) {
-      final provider = GoogleAuthProvider();
+        final userCredential = await FirebaseAuth.instance.signInWithPopup(
+          provider,
+        );
 
-      userCredential = await FirebaseAuth.instance.signInWithPopup(provider);
-    } else {
+        return userCredential.user;
+      }
+
       final GoogleSignIn signIn = GoogleSignIn.instance;
 
       await signIn.initialize();
@@ -20,15 +24,31 @@ class AuthRemoteDatasource {
       final googleAuth = googleUser.authentication;
 
       final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.idToken,
         idToken: googleAuth.idToken,
       );
 
-      userCredential = await FirebaseAuth.instance.signInWithCredential(
+      final userCredential = await FirebaseAuth.instance.signInWithCredential(
         credential,
       );
-    }
 
-    return userCredential.user;
+      return userCredential.user;
+    }
+    // WEB CLOSE POPUP
+    on FirebaseAuthException catch (e) {
+      if (e.code == 'popup-closed-by-user' ||
+          e.code == 'cancelled-popup-request') {
+        return null;
+      }
+
+      rethrow;
+    }
+    // MOBILE CANCEL
+    on GoogleSignInException catch (e) {
+      if (e.code == GoogleSignInExceptionCode.canceled) {
+        return null;
+      }
+
+      rethrow;
+    }
   }
 }

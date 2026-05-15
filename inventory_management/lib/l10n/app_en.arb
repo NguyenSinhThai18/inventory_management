@@ -10,5 +10,41 @@
   "continueWithGoogle": "Continue with Google",
   "loginSuccess": "Login success",
   "loginFailed": "Login failed",
-  "inventoryDescription": "Modern warehouse inventory management powered by Firebase"
+  "inventoryDescription": "Modern warehouse inventory management powered by Firebase",
+  "dashboardDescription": "Inventory Management Dashboard",
+
+  "receipts": "Receipts",
+  "dashboard": "Dashboard",
+  "products": "Products",
+  "profile": "Profile",
+  "inventoryManager": "Inventory Manager",
+  "create": "Create",
+  "chooseReceiptType": "Choose Receipt Type",
+  "chooseReceiptTypeDescription": "Select the type of receipt you want to create.",
+  "inventoryReceipt": "Inventory Receipt",
+  "inventoryReceiptDescription": "Create warehouse import receipt.",
+  "productsPage": "Products Page",
+  "profilePage": "Profile Page",
+
+  "searchReceiptHint": "Search receipt number...",
+  "filter": "Filter",
+  "upload": "Upload",
+  "scan": "Scan",
+  "receiptTableComingSoon": "Receipt table coming soon",
+
+  "receiptTableReceiptNo": "Receipt No",
+  "receiptTableDate": "Date",
+  "receiptTableWarehouse": "Warehouse",
+  "receiptTableDeliveredBy": "Delivered By",
+  "receiptTableTotal": "Total",
+  "receiptTableAction": "Action",
+  "receiptTableView": "View",
+  "receiptTableShowingRange": "Showing {start} - {end} of {total}",
+  "@receiptTableShowingRange": {
+    "placeholders": {
+      "start": {},
+      "end": {},
+      "total": {}
+    }
+  }
 }

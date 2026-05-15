@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/responsive/responsive.dart';
+import '../../../../l10n/app_localizations.dart';
 import '../providers/auth_provider.dart';
 import '../widgets/branding_section.dart';
 import '../widgets/login_card.dart';
@@ -15,19 +17,29 @@ class LoginPage extends ConsumerWidget {
 
     Future<void> onLogin() async {
       try {
-        await ref.read(authProvider.notifier).login();
+        final success = await ref.read(authProvider.notifier).login();
 
         if (!context.mounted) {
           return;
         }
 
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(const SnackBar(content: Text('Login success')));
+        if (!success) {
+          return;
+        }
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context)!.loginSuccess)),
+        );
+
+        context.go('/dashboard');
       } catch (_) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(const SnackBar(content: Text('Login failed')));
+        if (!context.mounted) {
+          return;
+        }
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context)!.loginFailed)),
+        );
       }
     }
 

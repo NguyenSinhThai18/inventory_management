@@ -10,5 +10,41 @@
   "continueWithGoogle": "Tiếp tục với Google",
   "loginSuccess": "Đăng nhập thành công",
   "loginFailed": "Đăng nhập thất bại",
-  "inventoryDescription": "Hệ thống quản lý kho hiện đại sử dụng Firebase"
+  "inventoryDescription": "Hệ thống quản lý kho hiện đại sử dụng Firebase",
+  "dashboardDescription": "Bảng điều khiển quản lý kho",
+
+  "receipts": "Phiếu",
+  "dashboard": "Bảng điều khiển",
+  "products": "Sản phẩm",
+  "profile": "Hồ sơ",
+  "inventoryManager": "Quản lý kho",
+  "create": "Tạo",
+  "chooseReceiptType": "Chọn loại phiếu",
+  "chooseReceiptTypeDescription": "Chọn loại phiếu bạn muốn tạo.",
+  "inventoryReceipt": "Phiếu nhập kho",
+  "inventoryReceiptDescription": "Tạo phiếu nhập hàng vào kho.",
+  "productsPage": "Trang sản phẩm",
+  "profilePage": "Trang hồ sơ",
+
+  "searchReceiptHint": "Tìm kiếm số phiếu...",
+  "filter": "Lọc",
+  "upload": "Tải lên",
+  "scan": "Quét",
+  "receiptTableComingSoon": "Bảng phiếu sẽ sớm có",
+
+  "receiptTableReceiptNo": "Số phiếu",
+  "receiptTableDate": "Ngày",
+  "receiptTableWarehouse": "Kho",
+  "receiptTableDeliveredBy": "Người giao",
+  "receiptTableTotal": "Tổng tiền",
+  "receiptTableAction": "Thao tác",
+  "receiptTableView": "Xem",
+  "receiptTableShowingRange": "Hiển thị {start} - {end} trên {total}",
+  "@receiptTableShowingRange": {
+    "placeholders": {
+      "start": {},
+      "end": {},
+      "total": {}
+    }
+  }
 }

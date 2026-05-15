@@ -11,13 +11,19 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
   AuthNotifier(this.ref) : super(const AuthState());
 
-  Future<void> login() async {
+  Future<bool> login() async {
     try {
       state = state.copyWith(isLoading: true);
 
-      await ref.read(signInWithGoogleProvider).call();
-    } catch (_) {
-      rethrow;
+      final user = await ref.read(signInWithGoogleProvider).call();
+
+      if (user == null) {
+        return false;
+      }
+
+      await ref.read(authRepositoryProvider).saveUser(user);
+
+      return true;
     } finally {
       state = state.copyWith(isLoading: false);
     }
